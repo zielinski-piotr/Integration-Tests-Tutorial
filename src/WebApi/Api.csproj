@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>API</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Auth.Data\Auth.Data.csproj" />
+        <ProjectReference Include="..\Auth.Service\Auth.Service.csproj" />
+        <ProjectReference Include="..\Contract\Contract.csproj" />
+        <ProjectReference Include="..\Data\Data.csproj" />
+        <ProjectReference Include="..\Service\Service.csproj" />
+    </ItemGroup>
+
+</Project>
