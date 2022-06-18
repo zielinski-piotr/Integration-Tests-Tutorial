@@ -75,8 +75,6 @@ public class HouseControllerRestSharpTests : IDisposable
         var token = await GetAuthenticationToken();
         _client.Authenticator = new JwtAuthenticator(token);
 
-        //requestContent.Headers.ContentType = new MediaTypeHeaderValue("application/json-patch+json");
-
         // Act
         var httpResponse = await _client.PatchAsync(request);
 
@@ -235,7 +233,7 @@ public class HouseControllerRestSharpTests : IDisposable
         // Assert response
         Assert.Equal(HttpStatusCode.BadRequest, httpResponse.StatusCode);
     }
-//[Fact(Skip="reason")]
+    
     [Fact]
     public async Task Update_Should_Update_House_Successfully()
     {
@@ -409,7 +407,7 @@ public class HouseControllerRestSharpTests : IDisposable
         {
             Area = 51,
             Color = "",
-            Name = ""
+            Name = "Some Name"
         };
 
         var request = new RestRequest($"House").AddBody(requestBody);
@@ -431,7 +429,7 @@ public class HouseControllerRestSharpTests : IDisposable
         {
             Area = 51,
             Color = null,
-            Name = "Some new name"
+            Name = "Some name"
         };
 
         var request = new RestRequest($"House").AddBody(requestBody);
