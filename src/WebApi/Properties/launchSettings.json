@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "JSONPatchTutorial.API": {
+    "API": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
