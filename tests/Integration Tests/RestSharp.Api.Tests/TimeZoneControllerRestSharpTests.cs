@@ -20,7 +20,7 @@ public class TimeZoneControllerRestSharpTests
     }
     
     [Fact]
-    public async Task GetDateTimeInTimeZone_Should_Return_DateTime_Recalculated_To_TimeZone()
+    public async Task CalculateDateTimeInTimeZone_Should_Return_DateTime_Recalculated_To_TimeZone()
     {
         // Arrange
         var requestBody = new Contract.Requests.TimeZone.Request
@@ -29,7 +29,7 @@ public class TimeZoneControllerRestSharpTests
             TimeZoneId = "Asia/Baghdad"
         };
 
-        var request = new RestRequest($"TimeZone").AddBody(requestBody);
+        var request = new RestRequest($"TimeZone/calculate").AddBody(requestBody);
         var token = await GetAuthenticationToken();
         _client.Authenticator = new JwtAuthenticator(token);
 

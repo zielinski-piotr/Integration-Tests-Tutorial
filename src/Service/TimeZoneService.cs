@@ -7,7 +7,7 @@ namespace Service;
 
 public class TimeZoneService : ITimeZoneService
 {
-    public TimeZone.Response GetDateTimeInTimeZone(
+    public TimeZone.Response CalculateDateTimeInTimeZone(
         Contract.Requests.TimeZone.Request timeZoneRequest)
     {
         try
