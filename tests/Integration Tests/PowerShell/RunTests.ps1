@@ -2,6 +2,9 @@ using namespace System.Net;
 using namespace Seeding;
 using namespace Domain;
 
+# To run the PowerShell Integration tests, copy Domain.dll and Seeding.dll from src\WebApi\bin\Debug\net6.0 to bin\ directory
+# Then execute with command: .\RunTests.ps1 "https://localhost:44364" "test@grpc.test" "p@sSw0rd123"
+
 Param (
     [Parameter(Mandatory = $true)][string]$baseAddress,
     [Parameter(Mandatory = $true)][string]$adminUserName,
@@ -12,8 +15,8 @@ $ErrorActionPreference = "Stop"
 
 $path = (Get-Location).Path
 
-Add-Type -AssemblyName .\Domain.dll
-Add-Type -AssemblyName .\Seeding.dll
+Add-Type -AssemblyName .\Bin\Domain.dll
+Add-Type -AssemblyName .\Bin\Seeding.dll
 
 . "$($path)\GlobalScripts.ps1"
 . "$($path)\GlobalVariables.ps1"
