@@ -126,19 +126,19 @@ public class Startup
             options.AddPolicy(AuthorizationPolicies.CanRemoveHouse,
                 policy => policy.RequireClaim(PermissionClaim.PermissionClaimType,
                     UserPermission.CanRemoveHousePermission.ToString()));
-            
+
             options.AddPolicy(AuthorizationPolicies.CanGetHouse,
                 policy => policy.RequireClaim(PermissionClaim.PermissionClaimType,
                     UserPermission.CanGetHousePermission.ToString()));
-            
+
             options.AddPolicy(AuthorizationPolicies.CanGetHouses,
                 policy => policy.RequireClaim(PermissionClaim.PermissionClaimType,
                     UserPermission.CanGetHousesPermission.ToString()));
-            
+
             options.AddPolicy(AuthorizationPolicies.CanCreateHouse,
                 policy => policy.RequireClaim(PermissionClaim.PermissionClaimType,
                     UserPermission.CanCreateHousePermission.ToString()));
-            
+
             options.AddPolicy(AuthorizationPolicies.CanUpdateHouse,
                 policy => policy.RequireClaim(PermissionClaim.PermissionClaimType,
                     UserPermission.CanUpdateHousePermission.ToString()));
@@ -149,6 +149,7 @@ public class Startup
         services.AddTransient<IHouseService, HouseService>();
         services.AddTransient<IAuthService, AuthService>();
         services.AddTransient<IRepository, Repository>();
+        services.AddTransient<ITimeZoneService, TimeZoneService>();
     }
 
     public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)

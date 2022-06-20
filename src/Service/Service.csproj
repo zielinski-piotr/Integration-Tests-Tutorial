@@ -6,14 +6,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AutoMapper" Version="11.0.1"/>
-        <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.5"/>
+        <PackageReference Include="AutoMapper" Version="11.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.5" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Contract\Contract.csproj"/>
-        <ProjectReference Include="..\Data\Data.csproj"/>
-        <ProjectReference Include="..\Domain\Domain.csproj"/>
+        <ProjectReference Include="..\Contract\Contract.csproj" />
+        <ProjectReference Include="..\Data\Data.csproj" />
+        <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 
 </Project>
